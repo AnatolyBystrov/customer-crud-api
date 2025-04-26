@@ -21,3 +21,11 @@ obj/
 
 .DS_Store
 
+# EF Core и NuGet artifacts
+*.nuget.g.props
+*.nuget.g.targets
+project.assets.json
+CustomerApi.AssemblyInfo.cs
+CustomerApi.AssemblyInfoInputs.cache
+CustomerApi.assets.cache
+
