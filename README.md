@@ -1,6 +1,6 @@
 <!-- Star Wars Cover -->
 <p align="center">
-  <img src="https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif" width="600" alt="Star Wars Epic GIF">
+  <img src="https://media.giphy.com/media/3o6ZsV4c0OehkMh8YU/giphy.gif" width="600" alt="Star Wars Epic GIF">
 </p>
 
 # 🚀 Customer CRUD API
