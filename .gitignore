@@ -1,0 +1,20 @@
+# Build artifacts
+bin/
+obj/
+*.dll
+*.pdb
+*.cache
+*.log
+*.db
+*.db-shm
+*.db-wal
+
+# VS Code
+.vscode/
+
+# Dotnet artifacts
+*.deps.json
+*.runtimeconfig.json
+*.staticwebassets.runtime.json
+*.staticwebassets.sources.json
+*.staticwebassets.build.json
