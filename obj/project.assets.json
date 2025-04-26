@@ -2821,20 +2821,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.15, 8.0.15]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.osx-arm64",
-            "version": "[8.0.15, 8.0.15]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.15, 8.0.15]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2852,7 +2838,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "CustomerApi depends on Npgsql.EntityFrameworkCore.PostgreSQL (>= 8.0.3) but Npgsql.EntityFrameworkCore.PostgreSQL 8.0.3 was not found. Npgsql.EntityFrameworkCore.PostgreSQL 8.0.4 was resolved instead.",
+      "message": "CustomerApi зависит от Npgsql.EntityFrameworkCore.PostgreSQL (>= 8.0.3), но версия Npgsql.EntityFrameworkCore.PostgreSQL 8.0.3 не найдена. Использовалась версия Npgsql.EntityFrameworkCore.PostgreSQL 8.0.4.",
       "libraryId": "Npgsql.EntityFrameworkCore.PostgreSQL",
       "targetGraphs": [
         "net8.0"
