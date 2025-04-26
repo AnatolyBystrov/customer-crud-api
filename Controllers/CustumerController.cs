@@ -1,60 +1,67 @@
+using Microsoft.AspNetCore.Mvc;
 using CustomerApi.Data;
 using CustomerApi.Models;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace CustomerApi.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("[controller]")]
 public class CustomersController : ControllerBase
 {
-    private readonly ApplicationDbContext _db;
-    public CustomersController(ApplicationDbContext db) => _db = db;
+    private readonly ApplicationDbContext _context;
 
-    // GET: api/customers
+    public CustomersController(ApplicationDbContext context)
+    {
+        _context = context;
+    }
+
     [HttpGet]
-    public async Task<IActionResult> GetAll()
-        => Ok(await _db.Customers.ToListAsync());
+    public async Task<IActionResult> Get()
+    {
+        var customers = await _context.Customers.ToListAsync();
+        return Ok(customers);
+    }
 
-    // GET: api/customers/5
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(int id)
     {
-        var customer = await _db.Customers.FindAsync(id);
-        return customer is null ? NotFound() : Ok(customer);
+        var customer = await _context.Customers.FindAsync(id);
+        return customer == null ? NotFound() : Ok(customer);
     }
 
-    // POST: api/customers
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] Customer customer)
+    public async Task<IActionResult> Post([FromBody] Customer customer)
     {
-        _db.Customers.Add(customer);
-        await _db.SaveChangesAsync();
+        _context.Customers.Add(customer);
+        await _context.SaveChangesAsync();
         return CreatedAtAction(nameof(Get), new { id = customer.CustomerID }, customer);
     }
 
-    // PUT: api/customers/5
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, [FromBody] Customer updated)
+    public async Task<IActionResult> Put(int id, [FromBody] Customer updatedCustomer)
     {
-        if (id != updated.CustomerID) 
-            return BadRequest();
+        var customer = await _context.Customers.FindAsync(id);
+        if (customer == null) return NotFound();
 
-        _db.Entry(updated).State = EntityState.Modified;
-        await _db.SaveChangesAsync();
+        customer.CustomerName = updatedCustomer.CustomerName;
+        customer.PhoneNumber = updatedCustomer.PhoneNumber;
+        customer.FaxNumber = updatedCustomer.FaxNumber;
+        customer.DeliveryAddressLine1 = updatedCustomer.DeliveryAddressLine1;
+        customer.CityName = updatedCustomer.CityName;
+
+        await _context.SaveChangesAsync();
         return NoContent();
     }
 
-    // DELETE: api/customers/5
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
-        var customer = await _db.Customers.FindAsync(id);
-        if (customer is null) return NotFound();
+        var customer = await _context.Customers.FindAsync(id);
+        if (customer == null) return NotFound();
 
-        _db.Customers.Remove(customer);
-        await _db.SaveChangesAsync();
+        _context.Customers.Remove(customer);
+        await _context.SaveChangesAsync();
         return NoContent();
     }
 }

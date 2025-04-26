@@ -7,5 +7,5 @@ public class Customer
     public string PhoneNumber { get; set; } = string.Empty;
     public string FaxNumber { get; set; } = string.Empty;
     public string DeliveryAddressLine1 { get; set; } = string.Empty;
-    public string CityName { get; set; } = string.Empty;
+   public string CityName { get; set; } = string.Empty;
 }
