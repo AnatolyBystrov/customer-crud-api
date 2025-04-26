@@ -1,7 +1,8 @@
 <!-- Star Wars Cover -->
 <p align="center">
-  <img src="https://media.giphy.com/media/3o6ZsV4c0OehkMh8YU/giphy.gif" width="600" alt="Star Wars Epic GIF">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Y0NzB0NGU4ZGJ3dDc5MzV1Zm91MTBhamplcmcyem40bnVtdGtpYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GnNtz3c1Ni8Ba/giphy.gif" width="600" alt="Master Yoda Epic">
 </p>
+
 
 # 🚀 Customer CRUD API
 
@@ -38,9 +39,6 @@ Crafted with precision and the power of the Force. 🛸
 | `POST` | `/api/Customers` | Create a new customer |
 | `PUT` | `/api/Customers/{id}` | Update an existing customer |
 | `DELETE` | `/api/Customers/{id}` | Delete a customer |
-
-Swagger documentation is available at:  
-👉 [`https://customer-crud-api-q7ex.onrender.com/`](https://customer-crud-api-q7ex.onrender.com/)
 
 ---
 
