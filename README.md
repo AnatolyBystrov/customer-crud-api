@@ -1,6 +1,6 @@
 <!-- Star Wars Cover -->
 <p align="center">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Y0NzB0NGU4ZGJ3dDc5MzV1Zm91MTBhamplcmcyem40bnVtdGtpYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GnNtz3c1Ni8Ba/giphy.gif" width="600" alt="Master Yoda Epic">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Y0NzB0NGU4ZGJ3dDc5MzV1Zm91MTBhamplcmcyem40bnVtdGtpYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GnNtz3c1Ni8Ba/giphy.gif" width="400" alt="Master Yoda Epic">
 </p>
 
 
